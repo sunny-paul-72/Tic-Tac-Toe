@@ -1,0 +1,179 @@
+/* Default Dark Mode Styles */
+body {
+  background-color: #121212;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  text-align: center;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  width: 360px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #b76df7; /* Neon purple */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 0 15px #b76df7, 0 0 30px #b76df7;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #292929;
+  border: 2px solid #4b4b4b;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cell:hover {
+  background: #2b0b3b;
+  box-shadow: 0 0 10px #ff4b8f, 0 0 20px #ff4b8f;
+  transform: scale(1.05);
+}
+
+.cell.taken {
+  pointer-events: none;
+  color: #6c757d;
+}
+
+#winner-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4b8f; /* Neon pink */
+  margin-top: 20px;
+  text-shadow: 0 0 15px #ff4b8f, 0 0 30px #ff4b8f;
+}
+
+#winner-message.hidden {
+  display: none;
+}
+
+.score-board p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+#restart-button {
+  background: #ff4b8f; /* Neon pink */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff4b8f, 0 0 30px #ff4b8f;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#restart-button:hover {
+  background: #ff6fae;
+  box-shadow: 0 0 20px #ff6fae, 0 0 40px #ff6fae;
+  transform: scale(1.05);
+}
+
+#restart-button:active {
+  transform: scale(0.95);
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  background: #f2f2f2;
+  color: #2c3e50;
+}
+
+.container.light-mode {
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cell.light-mode {
+  background: #f8f8f8;
+  color: #2c3e50;
+  border: 2px solid #cccccc;
+}
+
+.cell.light-mode:hover {
+  background: #eaeaea;
+  box-shadow: none;
+}
+
+#winner-message.light-mode {
+  color: #2c3e50;
+  text-shadow: none;
+}
+
+#restart-button.light-mode {
+  background: #3498db;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+#restart-button.light-mode:hover {
+  background: #2980b9;
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.6);
+}
+
+/* Toggle Switch */
+.toggle {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: inherit;
+}
+
+#mode-toggle {
+  width: 40px;
+  height: 20px;
+  background: #444;
+  border-radius: 20px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+#mode-toggle:checked {
+  background: #ff4b8f;
+}
+
+#mode-toggle:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+#mode-toggle:checked:before {
+  transform: translateX(20px);
+}

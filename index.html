@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div id="game-board">
+      <!-- Cells will be generated dynamically -->
+      <div class="cell" id="cell-0" role="button" aria-label="Cell 1"></div>
+      <div class="cell" id="cell-1" role="button" aria-label="Cell 2"></div>
+      <div class="cell" id="cell-2" role="button" aria-label="Cell 3"></div>
+      <div class="cell" id="cell-3" role="button" aria-label="Cell 4"></div>
+      <div class="cell" id="cell-4" role="button" aria-label="Cell 5"></div>
+      <div class="cell" id="cell-5" role="button" aria-label="Cell 6"></div>
+      <div class="cell" id="cell-6" role="button" aria-label="Cell 7"></div>
+      <div class="cell" id="cell-7" role="button" aria-label="Cell 8"></div>
+      <div class="cell" id="cell-8" role="button" aria-label="Cell 9"></div>
+    </div>
+    <div id="winner-message" class="hidden" role="alert"></div>
+    <div class="score-board">
+      <p>Player X: <span id="score-x">0</span></p>
+      <p>Player O: <span id="score-o">0</span></p>
+    </div>
+    <button id="restart-button">Restart Game</button>
+    <div class="toggle">
+      <label for="mode-toggle">Dark Mode</label>
+      <input type="checkbox" id="mode-toggle" aria-label="Toggle Dark Mode">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
